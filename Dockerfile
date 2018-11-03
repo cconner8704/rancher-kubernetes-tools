@@ -1,4 +1,4 @@
-FROM centos/nginx-18-centos7
+FROM centos:7
 MAINTAINER Chris Conner <chrism.conner@gmail.com>
 
 USER root
@@ -20,6 +20,7 @@ RUN set -ex                           \
     && yum install -y openssh \
     && yum install -y openssh-clients \
     && yum install -y wget \
+    && yum install -y nginx \
     && yum clean -y expire-cache
 
 
@@ -54,4 +55,4 @@ EXPOSE 80/tcp 443/tcp
 USER nginx
 
 ENTRYPOINT ["container-entrypoint"]
-CMD [ "nginx18" ]
+CMD [ "nginx" ]

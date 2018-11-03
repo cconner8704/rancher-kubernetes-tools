@@ -42,7 +42,7 @@ RUN cd /tmp && wget https://github.com/rancher/rke/releases/download/v0.1.11/rke
 # volumes
 VOLUME /etc/salt/cloud.maps.d \
        /etc/salt/cloud.profiles.d \
-       /etc/salt/cloud.providers.d \
+       /etc/salt/cloud.providers.d 
 #       /etc/nginx		\
 #       /usr/share/nginx/html
 

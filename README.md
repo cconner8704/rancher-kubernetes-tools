@@ -15,6 +15,7 @@ git remote set-url origin git@github.com:cmconner156/${REPONAME}.git
 git push -u origin master
 
 #Build docker image
+#docker login
 export REPONAME=rancher-kubernetes-tools
 echo "Building: ${REPONAME}"; docker build -t cmconner156/${REPONAME}:latest https://github.com/cmconner156/${REPONAME}.git
 

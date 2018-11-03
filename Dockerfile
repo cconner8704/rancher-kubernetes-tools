@@ -1,6 +1,8 @@
 FROM centos/nginx-18-centos7
 MAINTAINER Chris Conner <chrism.conner@gmail.com>
 
+USER root
+
 RUN set -ex                           \
     && yum install -y epel-release \
     && yum update -y \

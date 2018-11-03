@@ -62,4 +62,4 @@ EXPOSE 5000/tcp
 
 USER root
 
-CMD [ "nginx" ]
+CMD [ "nginx", "-g", "daemon off" ]

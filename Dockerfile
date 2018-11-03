@@ -52,6 +52,6 @@ VOLUME /etc/salt/cloud.maps.d \
 # ports
 EXPOSE 80/tcp 443/tcp
 
-USER nginx
+USER root
 
 CMD [ "nginx" ]

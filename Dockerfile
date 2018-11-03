@@ -54,5 +54,4 @@ EXPOSE 80/tcp 443/tcp
 
 USER nginx
 
-ENTRYPOINT ["container-entrypoint"]
 CMD [ "nginx" ]

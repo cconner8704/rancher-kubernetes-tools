@@ -54,4 +54,4 @@ EXPOSE 80/tcp 443/tcp
 
 USER nginx
 
-CMD [ "nginx" ]
+CMD [ "sleep 1000000" ]

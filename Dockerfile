@@ -41,9 +41,11 @@ gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cl
 #Install RKE
 RUN cd /tmp && wget https://github.com/rancher/rke/releases/download/v0.1.11/rke_linux-amd64 && mv rke_linux-amd64 /usr/bin/rke && chmod 755 /usr/bin/rke
 
-#Create extra HTML DIR
+#Create extra HTML DIR and rancher DIR
 RUN mkdir -p /var/www
 RUN chmod 777 /var/www
+RUN mkdir -p /rancher
+RUN chmod 777 /rancher
 
 #Copy files
 COPY nginx.conf /etc/nginx/nginx.conf
@@ -55,7 +57,8 @@ VOLUME /etc/salt/cloud.maps.d \
        /var/log/nginx \
        /etc/nginx/default.d \
        /etc/nginx/conf.d \
-       /var/www
+       /var/www \
+       /rancher
 
 # ports
 EXPOSE 5000/tcp
